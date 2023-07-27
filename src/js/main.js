@@ -56,7 +56,7 @@ function render(){
         div.appendChild(dateSpan);
 
         const completeBtn = document.createElement('button');
-        completeBtn.className = 'btn btn-primary btn-sm';
+        completeBtn.className = 'btn btn-primary btn-sm btn-completed';
         const completeNode = document.createTextNode( todo.isCompleted ? 'da completare' : 'completato');
         completeBtn.addEventListener('click', () => {
 
@@ -82,12 +82,13 @@ function render(){
             // div.style.borderColor='lime';
             div.style.backgroundColor='green';
             div.style.color='white';
-            completeBtn.style.backgroundColor = 'yellow';
+            completeBtn.style.backgroundColor = 'white';
+            // completeNode.style.color = 'green';
         }
 
 
         const deleteBtn = document.createElement('button');
-        deleteBtn.className = 'btn btn-danger btn-sm';
+        deleteBtn.className = 'btn btn-danger btn-sm btn-deleted';
         const deleteNode = document.createTextNode('cancella');
         deleteBtn.addEventListener('click', () => {
 

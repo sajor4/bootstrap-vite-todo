@@ -20,13 +20,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <button type="button" class="btn btn-outline-secondary btn-sm" id="btn-order-title">Ordina per nome</button>
             </li>
             <li class="nav-item">
-              <button type="button" class="btn btn-info" id="btn-order-title">Ordina per nome</button>
+              <button type="button" class="btn btn-outline-secondary btn-sm" id="btn-order-date">Ordina per data</button>
             </li>
             <li class="nav-item">
-              <button type="button" class="btn btn-info" id="btn-order-date">Ordina per data</button>
+              <div class="input-group mb-3 container-sm add-todo-container">
+                <input id="add-todo-input" class="form-control" placeholder="Scrivi il nome del ToDo da aggiungere..." aria-label="Example text with button addon" aria-describedby="button-addon1">
+                <button class="btn btn-outline-secondary" type="button" id="add-todo-btn">Aggiungi</button>
+              </div>
             </li>
           </ul>
         </div>
@@ -39,10 +42,7 @@
 
     </div>
     <div class="spacer"><br></div>
-        <div class="input-group mb-3 container-sm add-todo-container">
-          <input id="add-todo-input" class="form-control" placeholder="Scrivi il nome del ToDo da aggiungere..." aria-label="Example text with button addon" aria-describedby="button-addon1">
-          <button class="btn btn-outline-secondary" type="button" id="add-todo-btn">Aggiungi</button>
-        </div>
+        
   </main>
 
   <script type="module" src="./js/main.js"></script>
