@@ -2,14 +2,32 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;500;600&display=swap');
 
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background-color: aliceblue;
+    background-image: url(../public/background.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
     font-family: 'Open Sans', sans-serif;
+    
+}
+
+.container-brand{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: xx-large;
+    font-size: 5rem;
+    color: #FA7268;
 }
 
 .todo-container {
@@ -21,9 +39,27 @@ h1 {
 }
 .card {
     width: 18rem;
-    height: 20rem;
+    height: 15rem;
     padding: 1rem;
     margin: 0.5rem;
+    background-color: rgb(240, 248, 255, 0.2);
+    border: 1px solid #C62368;
+    color: white;
+}
+
+.card:hover {
+    background-color: #FA7268;
+    border: 1px solid white;
+}
+
+.card-title {
+    margin-bottom: 0;
+}
+
+
+.date-card{
+    font-size: 0.7rem;
+    margin-top: 0;
 }
 
 .add-todo-container {

@@ -48,8 +48,8 @@ function render(){
         cardTitle.appendChild(titleNode);
         div.appendChild(cardTitle);
         
-        const dateSpan=document.createElement('h6');
-        dateSpan.className = 'card-subtitle mb-2 fs-6';
+        const dateSpan=document.createElement('p');
+        dateSpan.className = 'date-card';
         const dateNode = document.createTextNode(todo.creationDate.toISOString());
 
         dateSpan.appendChild(dateNode);
@@ -57,7 +57,7 @@ function render(){
 
         const completeBtn = document.createElement('button');
         completeBtn.className = 'btn btn-primary btn-sm btn-completed';
-        const completeNode = document.createTextNode( todo.isCompleted ? 'da completare' : 'completato');
+        const completeNode = document.createTextNode( todo.isCompleted ? 'Da completare' : 'Completato');
         completeBtn.addEventListener('click', () => {
 
             const modifiedTodo = {...todo};
@@ -80,16 +80,16 @@ function render(){
 
         if(todo.isCompleted){
             // div.style.borderColor='lime';
-            div.style.backgroundColor='green';
+            div.style.backgroundColor='#C62368';
             div.style.color='white';
             completeBtn.style.backgroundColor = 'white';
-            // completeNode.style.color = 'green';
+            completeBtn.style.color = 'green';
         }
 
 
         const deleteBtn = document.createElement('button');
         deleteBtn.className = 'btn btn-danger btn-sm btn-deleted';
-        const deleteNode = document.createTextNode('cancella');
+        const deleteNode = document.createTextNode('Cancella');
         deleteBtn.addEventListener('click', () => {
 
             DBService.deleteTodo(todo.id).then(() => {
